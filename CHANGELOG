@@ -1,0 +1,7 @@
+0.1.0 - May 12th 2010
+* First release, with the following validators:
+** validates_as_cpf
+** validates_as_email
+** validates_as_cnpj
+** validates_as_phonenumber_br
+** validates_as_cep

@@ -1,0 +1,34 @@
+MoreValidators
+==============
+
+Rails gem/plugin is a series of validators provided by me or other people:
+
+ValidateAsEmail: http://github.com/gbdev/validates_as_email
+
+It's released under Creative Commons Attribution-Share Alike 3.0 Unported License.
+
+Installation:
+=============
+gem sources -a http://gems.github.com
+
+Install the gem(s):
+sudo gem install gbdev-validates_as_email
+
+Add to environment.rb initializer block:
+config.gem 'gbdev-validates_as_email', :version => '>=0.5.0', :lib => 'validates_as_email', :source => 'http://gems.github.com'
+
+Usage:
+======
+In your model file do something like:
+
+class MyClass < ActiveRecord::Base
+  validates_as_emaile :email, :message => 'Invalid Email Address', :allow_nil => true
+end
+
+Tests:
+======
+Some tests have been added.
+
+License:
+========
+See the LICENSE file.
