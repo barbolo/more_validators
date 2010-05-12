@@ -22,17 +22,17 @@ Gem::Specification.new do |s|
              'lib/validates_as_email.rb',
              'lib/validates_as_phonenumber_br.rb',
              'lib/validates_as_website.rb',
-             'lib/validates_as_cep_test.rb',
-             'lib/validates_as_cnpj_test.rb',
-             'lib/validates_as_email_test.rb',
-             'lib/validates_as_phonenumber_br_test.rb',
-             'lib/validates_as_website_test.rb']
+             'test/validates_as_cep_test.rb',
+             'test/validates_as_cnpj_test.rb',
+             'test/validates_as_email_test.rb',
+             'test/validates_as_phonenumber_br_test.rb',
+             'test/validates_as_website_test.rb']
 
-  s.test_files = ['lib/validates_as_cep_test.rb',
-                  'lib/validates_as_cnpj_test.rb',
-                  'lib/validates_as_email_test.rb',
-                  'lib/validates_as_phonenumber_br_test.rb',
-                  'lib/validates_as_website_test.rb']
+  s.test_files = ['test/validates_as_cep_test.rb',
+                  'test/validates_as_cnpj_test.rb',
+                  'test/validates_as_email_test.rb',
+                  'test/validates_as_phonenumber_br_test.rb',
+                  'test/validates_as_website_test.rb']
 
   s.has_rdoc = true
   
