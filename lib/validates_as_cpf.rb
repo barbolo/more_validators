@@ -7,7 +7,7 @@ module CPF
     cpf = cpf.to_s
 
     # could be 10 or 11 digits or with mask 999.999.999-99
-    if cpf !~ /^\d{10,11}|\d{3}\.\d{3}\.\d{3}-\d{2}$/
+    if cpf !~ /^\d{10,11}$|\d{3}\.\d{3}\.\d{3}-\d{2}$/
       return false
     end
 
@@ -49,29 +49,19 @@ module CPF
   end
 end
 
-# Validation helper for ActiveRecord derived objects that cleanly and simply
-# allows the model to check if the given string is a syntactically valid email
-# address (by using the RFC822 module above).
-#
-# Original code by Ximon Eighteen <ximon.eightee@int.greenpeace.org> which was
-# heavily based on code I can no longer find on the net, my apologies to the
-# author!
-#
-# Huge credit goes to Dan Kubb <dan.kubb@autopilotmarketing.com> for
-# submitting a patch to massively simplify this code and thereby instruct me
-# in the ways of Rails too! I reflowed the patch a little to keep the line
-# length to a maximum of 78 characters, an old habit.
 module ActiveRecord
   module Validations
     module ClassMethods
       def validates_as_cpf(*attr_names)
         configuration = {
           :message => I18n.translate('activerecord.errors.messages.invalid', :default => 'invalid' ),
-          :with => RFC822::EmailAddress,
           :allow_nil => true }
         configuration.update(attr_names.pop) if attr_names.last.is_a?(Hash)
 
-        validates_format_of attr_names, configuration
+        validates_each attr_names, configuration do |record, attribute, value|
+          record.errors.add(attribute, configuration[:message]) if CPF.invalid?(value)
+        end
+        
       end
     end
   end

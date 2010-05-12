@@ -17,12 +17,24 @@ Gem::Specification.new do |s|
              'Rakefile',
              'init.rb',
              'lib/validates_as_.rb',
+             'lib/validates_as_cep.rb',
+             'lib/validates_as_cnpj.rb',
              'lib/validates_as_email.rb',
-             'test/validates_as_email_test.rb']
+             'lib/validates_as_phonenumber_br.rb',
+             'lib/validates_as_website.rb',
+             'lib/validates_as_cep_test.rb',
+             'lib/validates_as_cnpj_test.rb',
+             'lib/validates_as_email_test.rb',
+             'lib/validates_as_phonenumber_br_test.rb',
+             'lib/validates_as_website_test.rb']
 
-  s.test_files = ['test/validates_as_email_test.rb']
+  s.test_files = ['lib/validates_as_cep_test.rb',
+                  'lib/validates_as_cnpj_test.rb',
+                  'lib/validates_as_email_test.rb',
+                  'lib/validates_as_phonenumber_br_test.rb',
+                  'lib/validates_as_website_test.rb']
 
-  s.has_rdoc = false
+  s.has_rdoc = true
   
   s.require_paths = ['lib']
   s.post_install_message = %q{

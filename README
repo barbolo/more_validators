@@ -7,27 +7,45 @@ ValidateAsEmail: http://github.com/gbdev/validates_as_email
 
 It's released under Creative Commons Attribution-Share Alike 3.0 Unported License.
 
+Talk to me if you have any questions:
+Rafael Barbolo: rafael@barbolo.com.br
+
 Installation:
 =============
 gem sources -a http://gems.github.com
 
 Install the gem(s):
-sudo gem install gbdev-validates_as_email
+gem install more_validators
 
 Add to environment.rb initializer block:
-config.gem 'gbdev-validates_as_email', :version => '>=0.5.0', :lib => 'validates_as_email', :source => 'http://gems.github.com'
+config.gem 'more_validators', :version => '>=0.1.0', :lib => 'validates_as_', :source => 'http://gems.github.com'
 
 Usage:
 ======
 In your model file do something like:
 
 class MyClass < ActiveRecord::Base
-  validates_as_emaile :email, :message => 'Invalid Email Address', :allow_nil => true
+
+	# Email validation
+	validates_as_email :email, :message => 'Invalid', :allow_nil => true
+	
+	# Brazilian postal code validation
+	validates_as_cep :cep, :message => 'Invalid', :allow_nil => true
+	
+	# Brazilian phone number validation
+	validates_as_phonenumber_br :phonenumber, :message => 'Invalid', :allow_nil => true
+	
+	# CPF validation
+	validates_as_cpf :cpf, :message => 'Invalid', :allow_nil => true
+	
+	# CNPJ validation
+	validates_as_cnpj :cnpj, :message => 'Invalid', :allow_nil => true
+
 end
 
 Tests:
 ======
-Some tests have been added.
+Some tests have been added to each validator.
 
 License:
 ========
