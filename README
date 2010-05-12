@@ -13,8 +13,6 @@ http://twitter.com/barbolo
 
 Installation:
 =============
-gem sources -a http://gems.github.com
-
 Install the gem(s):
 gem install more_validators
 
