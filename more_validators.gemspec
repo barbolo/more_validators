@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   
   s.name = 'more_validators'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.date = '2010-05-12'
   
   s.summary = 'Rails gem/plugin that provides a series of validators'
@@ -19,17 +19,20 @@ Gem::Specification.new do |s|
              'lib/validates_as_.rb',
              'lib/validates_as_cep.rb',
              'lib/validates_as_cnpj.rb',
+             'lib/validates_as_cpf.rb',
              'lib/validates_as_email.rb',
              'lib/validates_as_phonenumber_br.rb',
              'lib/validates_as_website.rb',
              'test/validates_as_cep_test.rb',
              'test/validates_as_cnpj_test.rb',
+             'test/validates_as_cpf_test.rb',
              'test/validates_as_email_test.rb',
              'test/validates_as_phonenumber_br_test.rb',
              'test/validates_as_website_test.rb']
 
   s.test_files = ['test/validates_as_cep_test.rb',
                   'test/validates_as_cnpj_test.rb',
+                  'test/validates_as_cpf_test.rb',
                   'test/validates_as_email_test.rb',
                   'test/validates_as_phonenumber_br_test.rb',
                   'test/validates_as_website_test.rb']
