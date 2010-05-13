@@ -17,7 +17,7 @@ Install the gem(s):
 gem install more_validators
 
 Add to environment.rb initializer block:
-config.gem 'more_validators', :version => '>=0.1.0', :lib => 'validates_as_'
+config.gem 'more_validators', :lib => 'validates_as_'
 
 Usage:
 ======
@@ -39,6 +39,9 @@ class MyClass < ActiveRecord::Base
 	
 	# CNPJ validation
 	validates_as_cnpj :cnpj, :message => 'Invalid', :allow_nil => true
+
+	# Brazilian UF validation, both upcase and downcase are allowed by default
+	validates_as_uf_br :uf, :message => 'Invalid', :allow_nil => true, :allow_up => true, :allow_down => true
 
 end
 

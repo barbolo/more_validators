@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   
   s.name = 'more_validators'
-  s.version = '0.1.1'
-  s.date = '2010-05-12'
+  s.version = '0.1.2'
+  s.date = '2010-05-13'
   
   s.summary = 'Rails gem/plugin that provides a series of validators'
   s.description = 'Rails gem/plugin that implements a series of ActiveRecord validation helpers'
@@ -23,19 +23,22 @@ Gem::Specification.new do |s|
              'lib/validates_as_email.rb',
              'lib/validates_as_phonenumber_br.rb',
              'lib/validates_as_website.rb',
+             'lib/validates_as_uf_br.rb',
              'test/validates_as_cep_test.rb',
              'test/validates_as_cnpj_test.rb',
              'test/validates_as_cpf_test.rb',
              'test/validates_as_email_test.rb',
              'test/validates_as_phonenumber_br_test.rb',
-             'test/validates_as_website_test.rb']
+             'test/validates_as_website_test.rb',
+             'test/validates_as_uf_br_test.rb']
 
   s.test_files = ['test/validates_as_cep_test.rb',
                   'test/validates_as_cnpj_test.rb',
                   'test/validates_as_cpf_test.rb',
                   'test/validates_as_email_test.rb',
                   'test/validates_as_phonenumber_br_test.rb',
-                  'test/validates_as_website_test.rb']
+                  'test/validates_as_website_test.rb',
+                  'test/validates_as_uf_br_test.rb']
 
   s.has_rdoc = true
   
