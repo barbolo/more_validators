@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   
   s.name = 'more_validators'
-  s.version = '0.1.2'
-  s.date = '2010-05-13'
+  s.version = '0.1.3'
+  s.date = '2010-05-14'
   
   s.summary = 'Rails gem/plugin that provides a series of validators'
   s.description = 'Rails gem/plugin that implements a series of ActiveRecord validation helpers'

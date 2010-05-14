@@ -41,6 +41,8 @@ class ValidatesAsCpfTest < Test::Unit::TestCase
     values = [
       '227.566.442-42',
       '22756644242']
+    
+    values.push('')
       
     values.each do |value|
       assert TestRecord.new(:cpf => value).valid?, "#{value} should be legal."

@@ -35,7 +35,9 @@ class ValidatesAsUFBRTest < Test::Unit::TestCase
   def test_legal_uf_br
     values = %w(ac al am ap ba ce df es go ma mg ms mt pa pb pe pi pr rj rn ro rr rs sc se sp to
     AC AL AM AP BA CE DF ES GO MA MG MS MT PA PB PE PI PR RJ RN RO RR RS SC SE SP TO)
-      
+
+    values.push('')
+
     values.each do |value|
       assert TestRecord.new(:uf_br => value).valid?, "#{value} should be legal."
     end

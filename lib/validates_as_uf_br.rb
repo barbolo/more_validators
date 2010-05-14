@@ -18,6 +18,7 @@ module ActiveRecord
         configuration = {
           :message => I18n.translate('activerecord.errors.messages.invalid', :default => 'invalid' ),
           :allow_nil => true,
+          :allow_blank => true,
           :allow_down => true,
           :allow_up => true }
         configuration.update(attr_names.pop) if attr_names.last.is_a?(Hash)

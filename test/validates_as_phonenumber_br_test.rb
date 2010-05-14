@@ -44,6 +44,8 @@ class ValidatesAsPhoneNumberBRTest < Test::Unit::TestCase
       '11-5555 5555',
       '11 555-5555']
       
+    values.push('')
+      
     values.each do |value|
       assert TestRecord.new(:phonenumber_br => value).valid?, "#{value} should be legal."
     end

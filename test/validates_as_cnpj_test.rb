@@ -41,6 +41,8 @@ class ValidatesAsCNPJTest < Test::Unit::TestCase
       '28.261.861/0001-42',
       '28261861000142']
       
+    values.push('')
+      
     values.each do |value|
       assert TestRecord.new(:cnpj => value).valid?, "#{value} should be legal."
     end

@@ -40,6 +40,9 @@ class ValidatesAsEmailTest < Test::Unit::TestCase
       'me@[187.223.45.119]',
       'someone@123.com',
       ]
+    
+    addresses.push('')  
+    
     addresses.each do |address|
       assert TestRecord.new(:email => address).valid?, "#{address} should be legal."
     end

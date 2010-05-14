@@ -40,6 +40,8 @@ class ValidatesAsWebsiteTest < Test::Unit::TestCase
       'https://test.com/',
       'http://www.test.com/test/test/test.html',
       'https://www.test.com/test/test/test.html?test=test']
+
+    values.push('')
       
     values.each do |value|
       assert TestRecord.new(:website => value).valid?, "#{value} should be legal."

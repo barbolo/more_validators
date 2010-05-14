@@ -3,7 +3,7 @@ module CPF
 55555555555 66666666666 77777777777 88888888888 99999999999
 00000000000)
 
-  def self.valid?(cpf)
+  def self.valid?(cpf)    
     cpf = cpf.to_s
 
     # could be 10 or 11 digits or with mask 999.999.999-99
@@ -55,7 +55,8 @@ module ActiveRecord
       def validates_as_cpf(*attr_names)
         configuration = {
           :message => I18n.translate('activerecord.errors.messages.invalid', :default => 'invalid' ),
-          :allow_nil => true }
+          :allow_nil => true,
+          :allow_blank => true }
         configuration.update(attr_names.pop) if attr_names.last.is_a?(Hash)
 
         validates_each attr_names, configuration do |record, attribute, value|

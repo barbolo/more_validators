@@ -38,6 +38,8 @@ class ValidatesAsCepTest < Test::Unit::TestCase
       '01234-000',
       '12345-678']
       
+    values.push('')
+      
     values.each do |value|
       assert TestRecord.new(:cep => value).valid?, "#{value} should be legal."
     end

@@ -19,6 +19,11 @@ gem install more_validators
 Add to environment.rb initializer block:
 config.gem 'more_validators', :lib => 'validates_as_'
 
+LatestVersion
+--------------
+Version: 0.1.3
+--------------
+
 Usage:
 ======
 In your model file do something like:
@@ -26,22 +31,22 @@ In your model file do something like:
 class MyClass < ActiveRecord::Base
 
 	# Email validation
-	validates_as_email :email, :message => 'Invalid', :allow_nil => true
+	validates_as_email :email, :message => 'Invalid', :allow_nil => true, :allow_blank => true
 	
 	# Brazilian postal code validation
-	validates_as_cep :cep, :message => 'Invalid', :allow_nil => true
+	validates_as_cep :cep, :message => 'Invalid', :allow_nil => true, :allow_blank => true
 	
 	# Brazilian phone number validation
-	validates_as_phonenumber_br :phonenumber, :message => 'Invalid', :allow_nil => true
+	validates_as_phonenumber_br :phonenumber, :message => 'Invalid', :allow_nil => true, :allow_blank => true
 	
 	# CPF validation
-	validates_as_cpf :cpf, :message => 'Invalid', :allow_nil => true
+	validates_as_cpf :cpf, :message => 'Invalid', :allow_nil => true, :allow_blank => true
 	
 	# CNPJ validation
-	validates_as_cnpj :cnpj, :message => 'Invalid', :allow_nil => true
+	validates_as_cnpj :cnpj, :message => 'Invalid', :allow_nil => true, :allow_blank => true
 
 	# Brazilian UF validation, both upcase and downcase are allowed by default
-	validates_as_uf_br :uf, :message => 'Invalid', :allow_nil => true, :allow_up => true, :allow_down => true
+	validates_as_uf_br :uf, :allow_up => true, :allow_down => true
 
 end
 

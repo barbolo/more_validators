@@ -4,6 +4,7 @@ module CNPJ
 88888888888888 99999999999999)
 
   def self.valid?(cnpj)
+    
     cnpj = cnpj.to_s
 
     # could be 13 or 14 digits or with mask 99.999.999/9999-99
@@ -57,7 +58,8 @@ module ActiveRecord
       def validates_as_cnpj(*attr_names)
         configuration = {
           :message => I18n.translate('activerecord.errors.messages.invalid', :default => 'invalid' ),
-          :allow_nil => true }
+          :allow_nil => true,
+          :allow_blank => true }
         configuration.update(attr_names.pop) if attr_names.last.is_a?(Hash)
 
         validates_each attr_names, configuration do |record, attribute, value|

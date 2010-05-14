@@ -48,7 +48,8 @@ module ActiveRecord
         configuration = {
           :message => I18n.translate('activerecord.errors.messages.invalid', :default => 'invalid' ),
           :with => RFC822::EmailAddress,
-          :allow_nil => true }
+          :allow_nil => true,
+          :allow_blank => true }
         configuration.update(attr_names.pop) if attr_names.last.is_a?(Hash)
 
         validates_format_of attr_names, configuration
